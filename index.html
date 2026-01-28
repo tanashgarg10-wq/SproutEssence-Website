@@ -1,14 +1,223 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Website</title>
+    <title>Sprout Essence | Microgreens for Vibrant Living</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello 👋 My site is live!</h1>
-    <p>If you can see this, deployment worked.</p>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html" aria-label="Sprout Essence">
+          <img src="assets/sprout-essence-logo.svg" alt="Sprout Essence logo" />
+          <span>Sprout Essence</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="is-active">Home</a>
+          <a href="about.html">About</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#products">Products</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle menu</span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="about.html">About</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Freshly harvested in Sprout Essence farms</p>
+          <h1>Microgreens that awaken flavor, wellness, and creativity.</h1>
+          <p>
+            Sprout Essence grows nutrient-dense microgreens for chefs, families, and
+            wellness enthusiasts. Harvested to order, delivered within hours.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#products">Explore our greens</a>
+            <a class="button button-ghost" href="#contact">Get a delivery quote</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <h3>30+ varieties</h3>
+              <p>Rotating seasonal blends.</p>
+            </div>
+            <div>
+              <h3>48-hour harvest</h3>
+              <p>Peak flavor, peak nutrition.</p>
+            </div>
+            <div>
+              <h3>Local-first</h3>
+              <p>Serving the Sprout Essence community.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <p class="hero-card-tag">Signature Blend</p>
+            <h2>Vibrant greens curated for salads, smoothies, and plates.</h2>
+            <p>
+              Grown indoors with clean water, sustainable lighting, and zero pesticides.
+            </p>
+          </div>
+          <div class="hero-glow" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section" id="benefits">
+        <div class="section-header">
+          <h2>Why microgreens?</h2>
+          <p>
+            Tiny leaves, massive benefits. Microgreens are packed with flavor and
+            concentrated nutrition.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Nutrient density</h3>
+            <p>
+              Up to 40x more vitamins and antioxidants than mature greens, perfect for
+              daily wellness.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Chef-driven flavor</h3>
+            <p>
+              Peppery, sweet, and crisp notes that elevate salads, bowls, tacos, and
+              entrees.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Year-round freshness</h3>
+            <p>
+              Indoor cultivation means consistent harvests, no matter the season.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="products">
+        <div class="section-header">
+          <h2>Our microgreen lineup</h2>
+          <p>
+            Designed for home kitchens, restaurants, and wellness retailers. Mix and
+            match to craft your signature menu.
+          </p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Sunrise Mix</h3>
+            <p>Broccoli, kale, and radish for energizing smoothies.</p>
+          </article>
+          <article class="product-card">
+            <h3>Garden Zest</h3>
+            <p>Mustard, arugula, and mizuna for a spicy finish.</p>
+          </article>
+          <article class="product-card">
+            <h3>Chef's Garnish</h3>
+            <p>Amaranth, basil, and chive microgreens for plating.</p>
+          </article>
+          <article class="product-card">
+            <h3>Detox Crunch</h3>
+            <p>Pea shoots and sunflower for crisp, hydrating salads.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="split">
+          <div>
+            <h2>How we grow at Sprout Essence</h2>
+            <p>
+              We combine clean-room standards with handcrafted care to ensure each tray
+              is vibrant and nutrient-rich.
+            </p>
+            <ul class="checklist">
+              <li>Filtered water and organic, non-GMO seeds.</li>
+              <li>Low-impact LED lighting for consistent growth.</li>
+              <li>Harvested the morning of delivery.</li>
+              <li>Compostable packaging options.</li>
+            </ul>
+          </div>
+          <div class="highlight-box">
+            <p class="eyebrow">Trusted by local partners</p>
+            <h3>Restaurants, meal prep services, and wellness studios.</h3>
+            <p>
+              We collaborate with kitchens to design custom blends tailored to the
+              season and their menus.
+            </p>
+            <a class="button button-secondary" href="about.html">Meet the team</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contact">
+        <div class="section-header">
+          <h2>Ready for fresh deliveries?</h2>
+          <p>
+            Share your needs and we will craft a weekly or custom order plan.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <h3>Contact</h3>
+            <p>Email: hello@sproutessence.com</p>
+            <p>Phone: (555) 012-0912</p>
+            <p>Service area: Greater metro & local delivery routes.</p>
+          </div>
+          <div class="contact-card">
+            <h3>Wholesale & subscriptions</h3>
+            <p>
+              Flexible plans for weekly pick-ups, chef boxes, and retail-ready packs.
+            </p>
+            <a class="button button-primary" href="mailto:hello@sproutessence.com">
+              Start an order
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="logo" href="index.html" aria-label="Sprout Essence">
+          <img src="assets/sprout-essence-logo.svg" alt="Sprout Essence logo" />
+          <span>Sprout Essence</span>
+        </a>
+        <p>Rooted in freshness. Growing microgreens for vibrant living.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#benefits">Benefits</a>
+        <a href="#products">Products</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>123 Sprout Lane</p>
+        <p>Greenfield, CA</p>
+        <p>Mon–Sat, 8am–6pm</p>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <p>Instagram @sproutessence</p>
+        <p>LinkedIn /sproutessence</p>
+      </div>
+      <p class="footer-note">© <span id="year"></span> Sprout Essence. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
