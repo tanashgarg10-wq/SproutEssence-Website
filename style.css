@@ -353,6 +353,42 @@ main {
   gap: 20px;
 }
 
+.product-list {
+  display: grid;
+  gap: 28px;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(260px, 1.2fr);
+  gap: 24px;
+  background: var(--white);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  align-items: center;
+}
+
+.product-image {
+  background: var(--sage-100);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius-md);
+}
+
+.product-info {
+  display: grid;
+  gap: 10px;
+}
+
 .split {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -512,5 +548,9 @@ main {
 
   .hero-card {
     padding: 24px;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
   }
 }
