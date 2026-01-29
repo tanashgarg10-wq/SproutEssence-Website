@@ -1,14 +1,155 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Website</title>
+    <title>Sprout Essence | Microgreens for Vibrant Living</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello 👋 My site is live!</h1>
-    <p>If you can see this, deployment worked.</p>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html" aria-label="Sprout Essence">
+          <span>Sprout Essence</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="is-active">Home</a>
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+          <a href="products.html">Products</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle menu</span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="index.html" class="is-active">Home</a>
+        <a href="about.html">About</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="products.html">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Freshly harvested in Sprout Essence farms</p>
+          <h1>Microgreens that awaken flavor, wellness, and creativity.</h1>
+          <p>
+            Sprout Essence grows nutrient-dense microgreens for chefs, families, and
+            wellness enthusiasts. Harvested to order, delivered within hours.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="products.html">Explore our greens</a>
+            <a class="button button-ghost" href="benefits.html">See the benefits</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <h3>9 varieties</h3>
+              <p>Curated, nutrient-rich greens.</p>
+            </div>
+            <div>
+              <h3>48-hour harvest</h3>
+              <p>Peak flavor, peak nutrition.</p>
+            </div>
+            <div>
+              <h3>Local-first</h3>
+              <p>Serving the Sprout Essence community.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <p class="hero-card-tag">Signature Experience</p>
+            <h2>Fresh, clean, and sustainable microgreens grown with purpose.</h2>
+            <p>
+              Grown indoors with clean water, sustainable lighting, and zero pesticides.
+            </p>
+          </div>
+          <div class="hero-glow" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section" id="explore">
+        <div class="section-header">
+          <h2>Explore Sprout Essence</h2>
+          <p>
+            Discover our story, the benefits of microgreens, and our full variety list.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>About the founder</h3>
+            <p>Meet the nutritionist behind Sprout Essence and our journey.</p>
+            <a class="text-link" href="about.html">Read our story →</a>
+          </article>
+          <article class="card">
+            <h3>Microgreen benefits</h3>
+            <p>See how microgreens support energy, immunity, and flavor.</p>
+            <a class="text-link" href="benefits.html">Explore benefits →</a>
+          </article>
+          <article class="card">
+            <h3>Product varieties</h3>
+            <p>Browse our fruity, fun-named microgreens and pricing.</p>
+            <a class="text-link" href="products.html">View products →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contact">
+        <div class="section-header">
+          <h2>Ready for fresh deliveries?</h2>
+          <p>
+            Share your needs and we will craft a weekly or custom order plan.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <h3>Contact</h3>
+            <p>Email: sproutessence@gmail.com</p>
+            <p>Phone: 9880709414</p>
+            <p>Service area: Greater metro & local delivery routes.</p>
+          </div>
+          <div class="contact-card">
+            <h3>Wholesale & subscriptions</h3>
+            <p>
+              Flexible plans for weekly pick-ups, chef boxes, and retail-ready packs.
+            </p>
+            <a class="button button-primary" href="mailto:sproutessence@gmail.com">
+              Start an order
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="logo" href="index.html" aria-label="Sprout Essence">
+          <span>Sprout Essence</span>
+        </a>
+        <p>Rooted in freshness. Growing microgreens for vibrant living.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="benefits.html">Benefits</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>123 Sprout Lane</p>
+        <p>Greenfield, CA</p>
+        <p>Mon–Sat, 8am–6pm</p>
+      </div>
+      <p class="footer-note">© <span id="year"></span> Sprout Essence. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
