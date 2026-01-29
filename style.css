@@ -84,6 +84,12 @@ main {
   color: var(--green-900);
   font-size: 1.1rem;
   letter-spacing: 0.02em;
+
+}
+
+.logo img {
+  width: 44px;
+  height: 44px;
 }
 
 .nav-links {
@@ -334,6 +340,7 @@ main {
   color: var(--green-700);
 }
 
+
 .card h3,
 .product-card h3 {
   margin-bottom: 12px;
@@ -386,6 +393,7 @@ main {
   gap: 10px;
 }
 
+
 .split {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -427,6 +435,7 @@ main {
   color: var(--neutral-700);
   font-size: 1.02rem;
 }
+
 
 .contact-grid {
   display: grid;
@@ -492,6 +501,7 @@ main {
   color: var(--green-900);
 }
 
+
 .site-footer {
   background: var(--green-900);
   color: var(--white);
@@ -550,4 +560,5 @@ main {
   .product-detail {
     grid-template-columns: 1fr;
   }
+
 }
