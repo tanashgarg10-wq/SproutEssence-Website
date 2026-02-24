@@ -4,6 +4,7 @@ const mobileMenu = document.querySelector(".mobile-menu");
 if (navToggle && mobileMenu) {
   navToggle.addEventListener("click", () => {
     const isOpen = mobileMenu.classList.toggle("is-open");
+    mobileMenu.hidden = !isOpen;
     navToggle.setAttribute("aria-expanded", isOpen);
   });
 }
