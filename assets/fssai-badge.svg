@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-label="FSSAI registered badge">
+  <rect x="4" y="4" width="512" height="152" rx="22" fill="#ffffff" stroke="#1f5f48" stroke-width="8"/>
+  <text x="32" y="70" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#1f5f48">FSSAI</text>
+  <text x="34" y="112" font-family="Arial, sans-serif" font-size="28" fill="#144635">Registered</text>
+  <circle cx="454" cy="80" r="40" fill="#e7f7ef" stroke="#1f5f48" stroke-width="6"/>
+  <path d="M436 80l13 13 24-27" fill="none" stroke="#1f7a58" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

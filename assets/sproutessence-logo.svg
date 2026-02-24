@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="SproutEssence logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f4738"/>
+      <stop offset="100%" stop-color="#0b2f25"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="112" fill="url(#bg)" stroke="#d8c17a" stroke-width="7"/>
+  <g fill="none" stroke="#d8c17a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 155c0-24 2-40 0-64"/>
+    <path d="M120 118c12-18 23-20 37-20-5 14-12 23-28 27"/>
+    <path d="M118 110c-11-15-22-16-35-16 5 13 12 19 26 22"/>
+  </g>
+  <text x="120" y="186" text-anchor="middle" fill="#d8c17a" font-family="Georgia, 'Times New Roman', serif" font-size="28">SproutEssence</text>
+</svg>
