@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Clean Indoor Grow">
+  <rect width="640" height="420" fill="#f3fbf6"/>
+  <circle cx="120" cy="340" r="120" fill="#d4efde"/>
+  <circle cx="560" cy="60" r="100" fill="#d9f3e4"/>
+  <path d="M310 350c-2-85 4-130 0-210" stroke="#195f42" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M312 238c34-52 74-62 128-62-18 40-42 68-98 76" fill="none" stroke="#195f42" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M306 220c-30-42-66-50-116-50 16 36 38 58 88 66" fill="none" stroke="#195f42" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="320" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#195f42">Clean Indoor Grow</text>
+</svg>

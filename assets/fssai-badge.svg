@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180" role="img" aria-label="FSSAI approved badge">
+  <rect x="4" y="4" width="612" height="172" rx="24" fill="#fff" stroke="#d7e8df" stroke-width="8"/>
+  <text x="44" y="102" font-family="Arial, sans-serif" font-size="82" font-style="italic" font-weight="700" fill="#2f8a5f">fssai</text>
+  <path d="M46 116c80 16 180 18 270 4" stroke="#f08b2f" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="355" y="82" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1b5a40">APPROVED</text>
+  <text x="355" y="116" font-family="Arial, sans-serif" font-size="24" fill="#245f45">Food Safety & Standards</text>
+  <text x="355" y="145" font-family="Arial, sans-serif" font-size="20" fill="#245f45">Authority of India</text>
+</svg>
