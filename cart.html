@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Cart | Sprout Essence</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html" aria-label="Sprout Essence"><span>Sprout Essence</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+          <a href="products.html" class="is-active">Products</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <h1>Your Cart</h1>
+          <p>Review items, update quantity, then continue to checkout.</p>
+        </div>
+
+        <div class="cart-grid">
+          <div class="cart-list" id="cart-list"></div>
+          <aside class="cart-summary">
+            <h3>Total: <span id="cart-total">₹0</span></h3>
+            <div class="hero-actions">
+              <a href="checkout.html" class="button button-primary">Proceed to checkout</a>
+              <button id="clear-cart" class="button button-ghost" type="button">Clear cart</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

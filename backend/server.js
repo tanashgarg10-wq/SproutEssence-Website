@@ -22,15 +22,26 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.post("/api/orders", async (req, res) => {
-  const { name, phone, email, address, itemName, quantity, notes } = req.body || {};
+  const { name, phone, email, address, cartItems, notes } = req.body || {};
 
-  const cleanedQuantity = Number.parseInt(quantity, 10);
-  if (!name || !phone || !email || !address || !itemName || Number.isNaN(cleanedQuantity) || cleanedQuantity < 1) {
+  if (!name || !phone || !email || !address || !Array.isArray(cartItems) || cartItems.length === 0) {
     return res.status(400).json({ error: "Missing or invalid order fields." });
   }
 
-  const totalPrice = UNIT_PRICE * cleanedQuantity;
-  const items = `${itemName} x ${cleanedQuantity}`;
+  const normalizedItems = [];
+  for (const item of cartItems) {
+    const itemName = item?.name?.toString().trim();
+    const quantity = Number.parseInt(item?.quantity, 10);
+
+    if (!itemName || Number.isNaN(quantity) || quantity < 1) {
+      return res.status(400).json({ error: "Invalid cart item received." });
+    }
+
+    normalizedItems.push({ name: itemName, quantity });
+  }
+
+  const totalPrice = normalizedItems.reduce((sum, item) => sum + item.quantity * UNIT_PRICE, 0);
+  const itemsText = normalizedItems.map((item) => `${item.name} x ${item.quantity}`).join(", ");
 
   const messageBody = [
     "🛒 *New Sprout Essence Order*",
@@ -38,7 +49,7 @@ app.post("/api/orders", async (req, res) => {
     `Phone: ${phone}`,
     `Email: ${email}`,
     `Address: ${address}`,
-    `Order: ${items}`,
+    `Order: ${itemsText}`,
     `Total Price: ₹${totalPrice}`,
     `Notes: ${notes || "N/A"}`,
     "",

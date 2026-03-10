@@ -9,9 +9,7 @@
   <body>
     <header class="site-header">
       <nav class="nav">
-        <a class="logo" href="index.html" aria-label="Sprout Essence">
-          <span>Sprout Essence</span>
-        </a>
+        <a class="logo" href="index.html" aria-label="Sprout Essence"><span>Sprout Essence</span></a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -26,51 +24,23 @@
       <section class="section checkout-section">
         <div class="section-header">
           <h1>Checkout</h1>
-          <p>Fill in your order details and place your order in one click.</p>
+          <p>Complete your details and place your order.</p>
         </div>
 
         <form id="checkout-form" class="checkout-form">
-          <label>
-            Full name
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            WhatsApp number
-            <input type="tel" name="phone" required placeholder="e.g. 919880709414" />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required placeholder="you@example.com" />
-          </label>
-          <label>
-            Delivery address
-            <textarea name="address" required rows="3"></textarea>
-          </label>
+          <label>Full name <input type="text" name="name" required /></label>
+          <label>WhatsApp number <input type="tel" name="phone" required placeholder="e.g. 919880709414" /></label>
+          <label>Email <input type="email" name="email" required placeholder="you@example.com" /></label>
+          <label>Delivery address <textarea name="address" required rows="3"></textarea></label>
 
-          <label>
-            Product
-            <input id="order-item" type="text" name="itemName" required />
-          </label>
-          <label>
-            Quantity
-            <input id="order-quantity" type="number" name="quantity" min="1" value="1" required />
-          </label>
-          <label>
-            Total price
-            <input id="order-total-display" type="text" value="₹199" readonly />
-          </label>
-          <input id="order-total" type="hidden" name="totalPrice" value="199" />
+          <label>Order summary <textarea id="order-items" name="items" rows="5" readonly required></textarea></label>
+          <label>Total price <input id="order-total-display" type="text" readonly /></label>
+          <input id="order-total" type="hidden" name="totalPrice" />
 
-          <label>
-            Notes (optional)
-            <textarea name="notes" rows="3" placeholder="Any custom request"></textarea>
-          </label>
+          <label>Notes (optional) <textarea name="notes" rows="3" placeholder="Any custom request"></textarea></label>
 
           <button class="button button-primary" type="submit" id="place-order-btn">Place order</button>
-          <p class="checkout-disclaimer">
-            Disclaimer: Delivery charges may apply according to distance. Final delivery
-            charges will be discussed over phone.
-          </p>
+          <p class="checkout-disclaimer">Disclaimer: Delivery charges may apply according to distance. Final delivery charges will be discussed over phone.</p>
           <p id="checkout-status" class="checkout-status" aria-live="polite"></p>
         </form>
       </section>
