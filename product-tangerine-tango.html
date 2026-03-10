@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tangerine Tango | SproutEssence</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html#explore" aria-label="SproutEssence"><img src="assets/sproutessence-logo.svg" alt="SproutEssence logo" /><span>SproutEssence</span></a>
+        <div class="nav-links"><a href="index.html#explore">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a><a href="products.html" class="is-active">Products</a><a href="cart.html">Cart</a></div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span><span class="sr-only">Toggle menu</span></button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden><a href="index.html#explore">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a><a href="products.html" class="is-active">Products</a><a href="cart.html">Cart</a></div>
+    </header>
+
+    <main>
+      <section class="section product-page">
+        <div class="product-detail">
+          <div class="product-image"><img src="assets/microgreen-placeholder.svg" alt="Carrot microgreens" /></div>
+          <div class="product-info">
+            <p class="eyebrow">Microgreen variety</p>
+            <h1>Tangerine Tango</h1>
+            <p class="detail-subtitle">Carrot microgreens</p>
+            <p class="price">₹199 / 50g (minimum)</p>
+            <p>Delicate tops with carotenoid support for skin and eye wellness.</p>
+            <ul class="checklist">
+              <li>Eye health support: Carotenoid content helps support eye and skin health.</li>
+              <li>Recommended serving: 20–30g daily as garnish, salad, or smoothie add-on.</li>
+              <li>Fresh harvest schedule keeps texture and nutrient density high.</li>
+            </ul>
+            <div class="product-controls">
+              <label class="weight-select">Select weight
+                <select class="item-weight">
+                  <option value="50g">50g</option>
+                  <option value="100g">100g</option>
+                  <option value="150g">150g</option>
+                  <option value="250g">250g</option>
+                </select>
+              </label>
+              <div class="hero-actions">
+                <button class="button button-primary add-to-cart" type="button" data-item-name="Tangerine Tango" data-item-price="199">Add to cart</button>
+                <a class="button button-ghost" href="cart.html">View cart</a>
+                <a class="button button-ghost" href="products.html#varieties">Back to all varieties</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="section-header"><h2>Tangerine Tango photo gallery</h2><p>Fresh visual references of this variety (sample gallery).</p></div>
+        <div class="gallery-grid">
+          <img src="assets/microgreen-gallery-1.svg" alt="Tangerine Tango gallery image 1" />
+          <img src="assets/microgreen-gallery-2.svg" alt="Tangerine Tango gallery image 2" />
+          <img src="assets/microgreen-gallery-3.svg" alt="Tangerine Tango gallery image 3" />
+          <img src="assets/microgreen-gallery-4.svg" alt="Tangerine Tango gallery image 4" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><h2>Health & disease-support angle</h2><p>Microgreens are functional foods and can be paired with wellness-oriented diets.</p></div>
+        <div class="details-grid">
+          <article class="detail-card"><h3>Primary support</h3><p>Eye health support</p></article>
+          <article class="detail-card"><h3>Nutrition highlight</h3><p>Carotenoid content helps support eye and skin health.</p></article>
+          <article class="detail-card"><h3>Important note</h3><p>Microgreens support wellness but do not replace medical treatment. Consult your doctor for specific conditions.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><a class="logo" href="index.html#explore" aria-label="SproutEssence"><img src="assets/sproutessence-logo.svg" alt="SproutEssence logo" /><span>SproutEssence</span></a><p>Rooted in freshness. Growing microgreens for vibrant living.</p></div>
+      <div><h4>Explore</h4><a href="benefits.html">Benefits</a><a href="products.html">Products</a><a href="about.html">About</a></div>
+      <div><h4>Visit</h4><p>Sector 150, Noida</p><p>201310</p><p>Mon–Sat, 8am–6pm</p></div>
+      <div class="fssai-note"><img src="assets/fssai-badge.svg" alt="FSSAI approved badge" /><p>FSSAI Approved</p></div>
+      <p class="footer-note">© <span id="year"></span> SproutEssence. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
