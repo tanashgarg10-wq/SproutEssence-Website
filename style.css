@@ -214,3 +214,52 @@ main {
     grid-template-columns: 1fr;
   }
 }
+.checkout-form {
+  max-width: 620px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.checkout-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.checkout-status {
+  min-height: 24px;
+  font-weight: 600;
+}
+
+
+.checkout-disclaimer {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.success-section {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+}
+
+.success-card {
+  max-width: 600px;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  display: grid;
+  gap: 12px;
+}
