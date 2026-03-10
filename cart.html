@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Cart | SproutEssence</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html#explore" aria-label="SproutEssence">
+          <img src="assets/sproutessence-logo.svg" alt="SproutEssence logo" />
+          <span>SproutEssence</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#explore">Home</a>
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+          <a href="products.html">Products</a>
+          <a href="cart.html" class="is-active">Cart</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span><span class="sr-only">Toggle menu</span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="index.html#explore">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a><a href="products.html">Products</a><a href="cart.html" class="is-active">Cart</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero-secondary">
+        <div class="section-header">
+          <h1>Your Cart</h1>
+          <p>Review your selected items and checkout. We’ll message you shortly on WhatsApp after order submission.</p>
+        </div>
+        <div class="cart-layout">
+          <div class="cart-card">
+            <h2>Items in cart</h2>
+            <div id="cart-empty" class="cart-empty">Your cart is empty. Add items from product pages.</div>
+            <div id="cart-items" class="cart-items"></div>
+            <button class="button button-ghost" id="clear-cart" type="button">Clear cart</button>
+          </div>
+
+          <form class="checkout-card" id="checkout-form">
+            <h2>Checkout details</h2>
+            <label>Name<input name="name" required /></label>
+            <label>Email<input type="email" name="email" required /></label>
+            <label>Phone<input name="phone" required /></label>
+            <label>Address<textarea name="address" rows="3" required></textarea></label>
+            <button class="button button-primary" type="submit">Checkout</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><a class="logo" href="index.html#explore" aria-label="SproutEssence"><img src="assets/sproutessence-logo.svg" alt="SproutEssence logo" /><span>SproutEssence</span></a><p>Rooted in freshness. Growing microgreens for vibrant living.</p></div>
+      <div><h4>Explore</h4><a href="benefits.html">Benefits</a><a href="products.html">Products</a><a href="about.html">About</a></div>
+      <div><h4>Visit</h4><p>Sector 150, Noida</p><p>201310</p><p>Mon–Sat, 8am–6pm</p></div>
+      <div class="fssai-note"><img src="assets/fssai-badge.svg" alt="FSSAI approved badge" /><p>FSSAI Approved</p></div>
+      <p class="footer-note">© <span id="year"></span> SproutEssence. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
