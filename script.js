@@ -162,25 +162,31 @@ if (checkoutForm) {
       notes: formData.get("notes")?.toString().trim(),
     };
 
-    statusElement.textContent = "Placing your order...";
+    statusElement.textContent = "Opening WhatsApp...";
 
-    try {
-      const response = await fetch("/api/orders", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(orderData),
-      });
+    const lines = [
+      "New Order - Sprout Essence",
+      `Name: ${orderData.name || ""}`,
+      `WhatsApp: ${orderData.phone || ""}`,
+      `Email: ${orderData.email || ""}`,
+      `Address: ${orderData.address || ""}`,
+      "",
+      "Items:",
+      orderData.items || "",
+      "",
+      `Total: ₹${orderData.totalPrice}`,
+    ];
 
-      if (!response.ok) {
-        throw new Error("Could not place order. Please try again.");
-      }
-
-      sessionStorage.setItem("latestOrderContact", orderData.phone || orderData.email || "");
-      saveCart([]);
-      window.location.href = "order-success.html";
-    } catch (error) {
-      statusElement.textContent = error.message;
+    if (orderData.notes) {
+      lines.push("", `Notes: ${orderData.notes}`);
     }
+
+    const whatsappNumber = "919880709414";
+    const whatsappText = encodeURIComponent(lines.join("\n"));
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+    sessionStorage.setItem("latestOrderContact", orderData.phone || orderData.email || "");
+    window.location.href = whatsappUrl;
   });
 }
 
