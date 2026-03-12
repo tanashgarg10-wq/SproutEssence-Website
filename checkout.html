@@ -9,7 +9,8 @@
   <body>
     <header class="site-header">
       <nav class="nav">
-        <a class="logo" href="index.html" aria-label="Sprout Essence"><span>Sprout Essence</span></a>
+        <a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence.jpg';" />
+          <span>Sprout Essence</span></a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -39,7 +40,10 @@
 
           <label>Notes (optional) <textarea name="notes" rows="3" placeholder="Any custom request"></textarea></label>
 
-          <button class="button button-primary" type="submit" id="place-order-btn">Place order</button>
+          <div class="hero-actions">
+            <button class="button button-primary" type="submit" id="place-order-btn">Send order on WhatsApp</button>
+            <a class="button button-ghost" href="cart.html">Go back to cart</a>
+          </div>
           <p class="checkout-disclaimer">Disclaimer: Delivery charges may apply according to distance. Final delivery charges will be discussed over phone.</p>
           <p id="checkout-status" class="checkout-status" aria-live="polite"></p>
         </form>
