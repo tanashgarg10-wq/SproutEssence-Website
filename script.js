@@ -28,14 +28,22 @@ function saveCart(items) {
   localStorage.setItem("cartItems", JSON.stringify(items));
 }
 
-function addToCart(name, price = UNIT_PRICE) {
+function getItemLabel(item) {
+  const typeSuffix = item.type ? ` (${item.type})` : "";
+  const weightSuffix = item.weightLabel ? ` - ${item.weightLabel}` : "";
+  return `${item.name}${typeSuffix}${weightSuffix}`;
+}
+
+function addToCart(name, price = UNIT_PRICE, type = "", weightLabel = "50g") {
   const cart = getCart();
-  const existing = cart.find((item) => item.name === name);
+  const existing = cart.find(
+    (item) => item.name === name && item.price === price && (item.type || "") === type && (item.weightLabel || "") === weightLabel
+  );
 
   if (existing) {
     existing.quantity += 1;
   } else {
-    cart.push({ name, price, quantity: 1 });
+    cart.push({ name, type, weightLabel, price, quantity: 1 });
   }
 
   saveCart(cart);
@@ -43,22 +51,39 @@ function addToCart(name, price = UNIT_PRICE) {
 
 function getCartTotals(cart) {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const summary = cart.map((item) => `${item.name} x ${item.quantity}`).join("\n");
+  const summary = cart.map((item) => `${getItemLabel(item)} x ${item.quantity}`).join("\n");
   return { total, summary };
 }
 
 for (const button of document.querySelectorAll(".add-to-cart-btn")) {
+  const updateButtonText = () => {
+    const productInfo = button.closest(".product-info");
+    const selectedWeight = productInfo?.querySelector('input[type="radio"][name^="weight-"]:checked');
+    const itemName = button.dataset.baseItem || button.dataset.item || "Item";
+    const weightLabel = selectedWeight?.dataset.label || "50g";
+    button.textContent = `Add ${itemName} (${weightLabel}) to cart`;
+  };
+
+  updateButtonText();
+  for (const option of document.querySelectorAll('input[type="radio"][name^="weight-"]')) {
+    option.addEventListener("change", updateButtonText);
+  }
+
   button.addEventListener("click", () => {
-    const itemName = button.dataset.item;
-    const price = Number.parseInt(button.dataset.price || String(UNIT_PRICE), 10);
-    addToCart(itemName, Number.isNaN(price) ? UNIT_PRICE : price);
+    const productInfo = button.closest(".product-info");
+    const selectedWeight = productInfo?.querySelector('input[type="radio"][name^="weight-"]:checked');
+    const itemName = button.dataset.baseItem || button.dataset.item;
+    const itemType = button.dataset.type || "";
+    const price = Number.parseInt(selectedWeight?.dataset.price || button.dataset.price || String(UNIT_PRICE), 10);
+    const weightLabel = selectedWeight?.dataset.label || "50g";
+
+    addToCart(itemName, Number.isNaN(price) ? UNIT_PRICE : price, itemType, weightLabel);
     window.location.href = "cart.html";
   });
 }
 
 const cartList = document.querySelector("#cart-list");
 if (cartList) {
-  const cart = getCart();
   const totalElement = document.querySelector("#cart-total");
   const clearButton = document.querySelector("#clear-cart");
 
@@ -76,7 +101,7 @@ if (cartList) {
         (item, index) => `
         <div class="cart-item">
           <div>
-            <h4>${item.name}</h4>
+            <h4>${getItemLabel(item)}</h4>
             <p>₹${item.price} each</p>
           </div>
           <input class="qty-input" type="number" min="1" value="${item.quantity}" data-index="${index}" />
@@ -112,13 +137,14 @@ if (cartList) {
     }
   };
 
-  saveCart(cart);
   renderCart();
 
-  clearButton.addEventListener("click", () => {
-    saveCart([]);
-    renderCart();
-  });
+  if (clearButton) {
+    clearButton.addEventListener("click", () => {
+      saveCart([]);
+      renderCart();
+    });
+  }
 }
 
 const checkoutForm = document.querySelector("#checkout-form");
@@ -128,20 +154,13 @@ if (checkoutForm) {
   const totalField = document.querySelector("#order-total");
   const totalDisplayField = document.querySelector("#order-total-display");
 
-  const cart = getCart();
-  const itemFromQuery = new URLSearchParams(window.location.search).get("item");
-
-  if (!cart.length && itemFromQuery) {
-    saveCart([{ name: itemFromQuery, price: UNIT_PRICE, quantity: 1 }]);
-  }
-
   const currentCart = getCart();
   const { total, summary } = getCartTotals(currentCart);
   orderItemsField.value = summary;
   totalField.value = String(total);
   totalDisplayField.value = `₹${total}`;
 
-  checkoutForm.addEventListener("submit", async (event) => {
+  checkoutForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const cartItems = getCart();
@@ -157,30 +176,32 @@ if (checkoutForm) {
       email: formData.get("email")?.toString().trim(),
       address: formData.get("address")?.toString().trim(),
       items: formData.get("items")?.toString().trim(),
-      totalPrice: Number.parseInt(formData.get("totalPrice")?.toString() || "0", 10),
-      cartItems,
       notes: formData.get("notes")?.toString().trim(),
     };
 
-    statusElement.textContent = "Placing your order...";
+    statusElement.textContent = "Opening WhatsApp...";
 
-    try {
-      const response = await fetch("/api/orders", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(orderData),
-      });
+    const lines = [
+      "New Order - SproutEssence",
+      `Name: ${orderData.name || ""}`,
+      `WhatsApp: ${orderData.phone || ""}`,
+      `Email: ${orderData.email || ""}`,
+      `Address: ${orderData.address || ""}`,
+      "",
+      "Items:",
+      orderData.items || "",
+    ];
 
-      if (!response.ok) {
-        throw new Error("Could not place order. Please try again.");
-      }
-
-      sessionStorage.setItem("latestOrderContact", orderData.phone || orderData.email || "");
-      saveCart([]);
-      window.location.href = "order-success.html";
-    } catch (error) {
-      statusElement.textContent = error.message;
+    if (orderData.notes) {
+      lines.push("", `Notes: ${orderData.notes}`);
     }
+
+    const whatsappNumber = "81303775888";
+    const whatsappText = encodeURIComponent(lines.join("\n"));
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+    sessionStorage.setItem("latestOrderContact", orderData.phone || orderData.email || "");
+    window.location.href = whatsappUrl;
   });
 }
 

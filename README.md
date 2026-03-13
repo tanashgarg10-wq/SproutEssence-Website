@@ -1,48 +1,38 @@
 # SproutEssence-Website
 
-Sprout Essence now has a complete cart + checkout + backend WhatsApp order flow.
+Sprout Essence uses a cart + checkout flow that opens a prefilled WhatsApp message for order confirmation.
 
 ## User flow
 
 1. Customer opens a product page and clicks **Add to cart**.
-2. Customer reviews/edit quantities on `cart.html`.
-3. Customer goes to `checkout.html`, fills personal details, and clicks **Place order**.
-4. Backend sends the order directly to your WhatsApp Business destination number.
-5. Customer sees `order-success.html`.
+2. Customer reviews/edits quantities on `cart.html`.
+3. Customer goes to `checkout.html`, fills personal details, and clicks **Send order on WhatsApp**.
+4. Site opens WhatsApp with a prefilled order message to your business number.
 
-## Order details sent to WhatsApp
+## Where to upload the logo file
 
-- Customer name
-- Customer phone number
-- Customer email
-- Delivery address
-- Order items with quantities
-- Total price (server-calculated)
-- Notes
-- Disclaimer: delivery charges may apply according to distance and will be discussed over phone
+Upload your exact logo image into the repo folder:
 
-## Run locally
+- `assets/sproutessence.png` (preferred)
+- or `assets/sproutessence.jpg` (fallback)
+
+### Steps
+
+1. Put your logo file in the `assets/` folder.
+2. Name it exactly `sproutessence.png` (or `sproutessence.jpg`).
+3. Deploy/publish your site.
+
+The website already references these paths in header/footer logo markup, so no further code changes are needed.
+
+## Run locally (static preview)
 
 ```bash
-cd backend
-npm install
-cp .env.example .env
-npm run dev
+python -m http.server 4173 --bind 0.0.0.0
 ```
 
-Open: `http://localhost:4000/products.html`
-
-## Environment variables
-
-```env
-PORT=4000
-WHATSAPP_PHONE_NUMBER_ID=your_phone_number_id
-WHATSAPP_ACCESS_TOKEN=your_permanent_access_token
-WHATSAPP_TO_NUMBER=918130377588
-```
+Open: `http://localhost:4173/products.html`
 
 ## Notes
 
 - Unit price is fixed at `₹199`.
-- Backend recomputes total using cart quantities to reduce client-side tampering.
-- Keep WhatsApp token and credentials only in environment variables.
+- If both files exist, `.png` is used first and `.jpg` is used as fallback.

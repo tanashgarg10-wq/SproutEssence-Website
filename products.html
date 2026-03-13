@@ -10,28 +10,27 @@
     <header class="site-header">
       <nav class="nav">
         <a class="logo" href="index.html" aria-label="Sprout Essence">
-          <span>Sprout Essence</span>
+          <img src="assets/sproutessence.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence.jpg';" />
+          <span>SproutEssence</span>
         </a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="benefits.html">Benefits</a>
           <a href="products.html" class="is-active">Products</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="blogs.html">Blogs</a>
           <a href="index.html#contact">Contact</a>
+          <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
         </div>
         <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Toggle menu</span>
+          <span></span><span></span><span></span><span class="sr-only">Toggle menu</span>
         </button>
       </nav>
       <div class="mobile-menu" id="mobile-menu" hidden>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="benefits.html">Benefits</a>
-        <a href="products.html" class="is-active">Products</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a>
+        <a href="products.html" class="is-active">Products</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a>
+        <a href="index.html#contact">Contact</a><a href="cart.html">Cart</a>
       </div>
     </header>
 
@@ -39,116 +38,67 @@
       <section class="hero hero-secondary">
         <div class="hero-content">
           <p class="eyebrow">Our microgreen varieties</p>
-          <h1>Fruity, fun names for our freshest greens.</h1>
-          <p>
-            Browse our full variety list below. Click any name to jump to its details
-            and pricing.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#varieties">Jump to varieties</a>
-          </div>
+          <h1>Fresh microgreens at ₹199 for 50g.</h1>
+          <p>Available in 25g and 50g packs. Click any variety for detailed info and ordering.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#varieties">Jump to varieties</a></div>
         </div>
-        <div class="hero-visual">
-          <div class="hero-card">
-            <p class="hero-card-tag">Flat rate</p>
-            <h2>All varieties at ₹199 (introductory price).</h2>
-            <p>Pricing can be updated anytime — just let us know.</p>
-          </div>
-          <div class="hero-glow" aria-hidden="true"></div>
-        </div>
+        <div class="hero-visual"><div class="hero-card"><p class="hero-card-tag">Flat rate</p><h2>50g at ₹199 • 25g at ₹99</h2><p>No introductory pricing — this is our regular price.</p></div><div class="hero-glow" aria-hidden="true"></div></div>
       </section>
 
       <section class="section" id="varieties">
-        <div class="section-header">
-          <h2>Choose your greens</h2>
-          <p>
-            Click a variety to open its dedicated page with photos, pricing,
-            and details.
-          </p>
-        </div>
-
+        <div class="section-header"><h2>Choose your greens</h2></div>
         <div class="variety-grid">
-          <a class="variety-card" href="product-sunburst-sunflower.html">
-            <h3>Sunburst Sunshine</h3>
-            <p>Sunflower microgreens</p>
-          </a>
+          <a class="variety-card" href="product-sunburst-sunflower.html"><h3>Sunburst Sunshine</h3><p>Sunflower microgreens</p></a>
+          <a class="variety-card" href="product-pea-pop.html"><h3>Pea Pop Splash</h3><p>Green pea shoots</p></a>
+          <a class="variety-card" href="product-berry-blaze.html"><h3>Berry Blaze</h3><p>Purple radish</p></a>
+          <a class="variety-card" href="product-citrus-cloud.html"><h3>Citrus Cloud</h3><p>White radish</p></a>
+          <a class="variety-card" href="product-berry-beet.html"><h3>Berry Beet Boom</h3><p>Beetroot</p></a>
+          <a class="variety-card" href="product-lime-lift.html"><h3>Lime Lift</h3><p>Wheatgrass</p></a>
+          <a class="variety-card" href="product-mango-methi.html"><h3>Pak Choy Crunch</h3><p>Pak choy microgreens</p></a>
+          <a class="variety-card" href="product-ruby-rain.html"><h3>Brocco Burst</h3><p>Broccoli microgreens</p></a>
+          <a class="variety-card" href="product-tangerine-tango.html"><h3>Mustard Zing</h3><p>Mustard microgreens</p></a>
+          <a class="variety-card" href="product-pink-radish.html"><h3>Pink Radish Pop</h3><p>Pink radish microgreens</p></a>
+        </div>
+      </section>
 
-          <a class="variety-card" href="product-pea-pop.html">
-            <h3>Pea Pop Splash</h3>
-            <p>Green pea shoots</p>
-          </a>
+      <section class="section">
+        <div class="section-header"><h2>Growing supplies</h2></div>
+        <div class="card-grid">
+          <article class="card"><h3>Professional growing racks</h3><p>Sturdy indoor rack systems for efficient production.</p></article>
+          <article class="card"><h3>Cocopeat discs</h3><p>Clean and easy starter medium for home and farm growers.</p></article>
+          <article class="card"><h3>Microgreen growing medium</h3><p>Balanced medium designed for quick, healthy germination.</p></article>
+          <article class="card"><h3>Microgreen trays</h3><p>Food-safe trays ideal for repeated growth cycles.</p></article>
+          <article class="card"><h3>Spray bottles</h3><p>Fine-mist sprayers for moisture control during early growth.</p></article>
+        </div>
+      </section>
 
-          <a class="variety-card" href="product-berry-blaze.html">
-            <h3>Berry Blaze</h3>
-            <p>Purple radish</p>
-          </a>
-
-          <a class="variety-card" href="product-citrus-cloud.html">
-            <h3>Citrus Cloud</h3>
-            <p>White radish</p>
-          </a>
-
-          <a class="variety-card" href="product-mango-methi.html">
-            <h3>Mango Methi Twist</h3>
-            <p>Methi (fenugreek)</p>
-          </a>
-
-          <a class="variety-card" href="product-berry-beet.html">
-            <h3>Berry Beet Boom</h3>
-            <p>Beetroot</p>
-          </a>
-
-          <a class="variety-card" href="product-lime-lift.html">
-            <h3>Lime Lift</h3>
-            <p>Wheatgrass</p>
-          </a>
-
-          <a class="variety-card" href="product-ruby-rain.html">
-            <h3>Ruby Rain</h3>
-            <p>Amaranthus</p>
-          </a>
-
-          <a class="variety-card" href="product-tangerine-tango.html">
-            <h3>Tangerine Tango</h3>
-            <p>Carrot</p>
-          </a>
+      <section class="section section-alt">
+        <div class="section-header"><h2>Subscription model</h2></div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>1-Month Plan</h3>
+            <p>4 boxes (₹199 each = ₹796)</p>
+            <p><strong>20% off</strong> → You pay <strong>₹637</strong> approx.</p>
+          </article>
+          <article class="card">
+            <h3>3-Month Plan</h3>
+            <p>12 boxes (₹199 each = ₹2,388)</p>
+            <p><strong>25% off</strong> → You pay <strong>₹1,791</strong> approx.</p>
+          </article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div>
-        <a class="logo" href="index.html" aria-label="Sprout Essence">
-          <span>Sprout Essence</span>
-        </a>
+        <a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence1.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence1.jpg';" /><span>SproutEssence</span></a>
         <p>Rooted in freshness. Growing microgreens for vibrant living.</p>
       </div>
-
-      <div>
-        <h4>Explore</h4>
-        <a href="benefits.html">Benefits</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-      </div>
-
-      <div>
-        <h4>Visit</h4>
-        <p>123 Sprout Lane</p>
-        <p>Greenfield, CA</p>
-        <p>Mon–Sat, 8am–6pm</p>
-      </div>
-
-      <div>
-        <h4>Connect</h4>
-        <p>Email: sproutessence@gmail.com</p>
-        <p>Phone: 9880709414</p>
-      </div>
-
-      <p class="footer-note">
-        © <span id="year"></span> Sprout Essence. All rights reserved.
-      </p>
+      <div><h4>Explore</h4><a href="benefits.html">Benefits</a><a href="products.html">Products</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a><a href="about.html">About</a></div>
+      <div><h4>Visit</h4><p>Sector 150, Noida</p><p>Mon–Sat, 8am–6pm</p></div>
+      <div><h4>Connect</h4><p>📧 sproutessence@gmail.com</p><p>📞 9880709414 / 81303775888</p><p>📸 @sproutessence</p></div>
+      <p class="footer-note">© <span id="year"></span> SproutEssence. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

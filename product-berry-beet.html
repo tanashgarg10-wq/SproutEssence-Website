@@ -10,28 +10,18 @@
     <header class="site-header">
       <nav class="nav">
         <a class="logo" href="index.html" aria-label="Sprout Essence">
-          <span>Sprout Essence</span>
+          <img src="assets/sproutessence.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence.jpg';" />
+          <span>SproutEssence</span>
         </a>
         <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="benefits.html">Benefits</a>
-          <a href="products.html" class="is-active">Products</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a>
+          <a href="products.html" class="is-active">Products</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a><a href="index.html#contact">Contact</a>
+          <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
         </div>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Toggle menu</span>
-        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span><span class="sr-only">Toggle menu</span></button>
       </nav>
       <div class="mobile-menu" id="mobile-menu" hidden>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="benefits.html">Benefits</a>
-        <a href="products.html" class="is-active">Products</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a><a href="products.html" class="is-active">Products</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a><a href="index.html#contact">Contact</a><a href="cart.html">Cart</a>
       </div>
     </header>
 
@@ -40,31 +30,28 @@
         <div class="product-detail">
           <div class="product-image">
             <img src="assets/microgreen-placeholder.svg" alt="Beetroot microgreens" />
+            <div class="product-gallery">
+              <img src="assets/microgreen-placeholder.svg" alt="Beetroot microgreens photo 1" />
+              <img src="assets/microgreen-placeholder.svg" alt="Beetroot microgreens photo 2" />
+              <img src="assets/microgreen-placeholder.svg" alt="Beetroot microgreens photo 3" />
+              <img src="assets/microgreen-placeholder.svg" alt="Beetroot microgreens photo 4" />
+              <img src="assets/microgreen-placeholder.svg" alt="Beetroot microgreens photo 5" />
+            </div>
           </div>
           <div class="product-info">
             <p class="eyebrow">Microgreen variety</p>
             <h1>Berry Beet Boom</h1>
             <p class="detail-subtitle">Beetroot microgreens</p>
-            <p class="price">₹199</p>
-            <p>
-              Sweet earthiness and striking magenta tones — elevate salads, hummus,
-              and mezze platters.
-            </p>
-            <ul class="checklist">
-              <li>Jewel-toned leaves for bold visual impact.</li>
-              <li>Sweet earthy flavor for dips and bowls.</li>
-              <li>Great for mezze, wraps, and salads.</li>
-            </ul>
+            <p class="price">₹99 (25g) / ₹199 (50g)</p>
+            <p>Sweet earthiness and striking magenta tones for wraps, hummus, and mezze plates.</p>
+            <div class="weight-options" role="group" aria-label="Select pack size">
+              <label><input type="radio" name="weight-beetroot" data-label="25g" data-price="99" checked /> 25g</label>
+              <label><input type="radio" name="weight-beetroot" data-label="50g" data-price="199" /> 50g</label>
+            </div>
             <div class="hero-actions">
-              <button class="button button-primary add-to-cart-btn" type="button" data-item="Berry Beet Boom" data-price="199">
-                Add Berry Beet Boom to cart
-              </button>
-              <a class="button button-secondary" href="cart.html">
-                View cart
-              </a>
-              <a class="button button-ghost" href="products.html">
-                Back to all varieties
-              </a>
+              <button class="button button-primary add-to-cart-btn" type="button" data-base-item="Berry Beet Boom" data-type="Beetroot microgreens" data-price="199">Add to cart</button>
+              <a class="button button-secondary" href="cart.html">View cart</a>
+              <a class="button button-ghost" href="products.html">Back to all varieties</a>
             </div>
           </div>
         </div>
@@ -72,34 +59,12 @@
     </main>
 
     <footer class="site-footer">
-      <div>
-        <a class="logo" href="index.html" aria-label="Sprout Essence">
-          <span>Sprout Essence</span>
-        </a>
-        <p>Rooted in freshness. Growing microgreens for vibrant living.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <a href="benefits.html">Benefits</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-      </div>
-      <div>
-        <h4>Visit</h4>
-        <p>123 Sprout Lane</p>
-        <p>Greenfield, CA</p>
-        <p>Mon–Sat, 8am–6pm</p>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <p>Email: sproutessence@gmail.com</p>
-        <p>Phone: 9880709414</p>
-      </div>
-      <p class="footer-note">
-        © <span id="year"></span> Sprout Essence. All rights reserved.
-      </p>
+      <div><a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence1.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence1.jpg';" /><span>SproutEssence</span></a><p>Rooted in freshness. Growing microgreens for vibrant living.</p></div>
+      <div><h4>Explore</h4><a href="benefits.html">Benefits</a><a href="products.html">Products</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a><a href="about.html">About</a></div>
+      <div><h4>Visit</h4><p>Sector 150, Noida</p><p>Mon–Sat, 8am–6pm</p></div>
+      <div><h4>Connect</h4><p>📧 sproutessence@gmail.com</p><p>📞 9880709414 / 81303775888</p><p>📸 @sproutessence</p></div>
+      <p class="footer-note">© <span id="year"></span> SproutEssence. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

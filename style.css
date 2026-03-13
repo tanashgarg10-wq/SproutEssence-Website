@@ -126,3 +126,9 @@ main { padding-bottom: 40px; }
   .product-detail { grid-template-columns:1fr; }
   .hero-stats { grid-template-columns:1fr; }
 }
+
+.cart-icon { font-size:1.15rem; line-height:1; }
+.weight-options { display:flex; gap:16px; margin:14px 0; font-weight:600; }
+.weight-options input { margin-right:6px; }
+.product-gallery { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; padding:12px; }
+.product-gallery img { border-radius:8px; border:1px solid rgba(15,23,42,.08); background:#fff; }

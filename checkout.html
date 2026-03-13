@@ -9,13 +9,17 @@
   <body>
     <header class="site-header">
       <nav class="nav">
-        <a class="logo" href="index.html" aria-label="Sprout Essence"><span>Sprout Essence</span></a>
+        <a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence.jpg';" />
+          <span>SproutEssence</span></a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="benefits.html">Benefits</a>
           <a href="products.html" class="is-active">Products</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="blogs.html">Blogs</a>
           <a href="index.html#contact">Contact</a>
+          <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
         </div>
       </nav>
     </header>
@@ -29,7 +33,7 @@
 
         <form id="checkout-form" class="checkout-form">
           <label>Full name <input type="text" name="name" required /></label>
-          <label>WhatsApp number <input type="tel" name="phone" required placeholder="e.g. 919880709414" /></label>
+          <label>WhatsApp number <input type="tel" name="phone" required placeholder="e.g. 81303775888" /></label>
           <label>Email <input type="email" name="email" required placeholder="you@example.com" /></label>
           <label>Delivery address <textarea name="address" required rows="3"></textarea></label>
 
@@ -39,7 +43,10 @@
 
           <label>Notes (optional) <textarea name="notes" rows="3" placeholder="Any custom request"></textarea></label>
 
-          <button class="button button-primary" type="submit" id="place-order-btn">Place order</button>
+          <div class="hero-actions">
+            <button class="button button-primary" type="submit" id="place-order-btn">Send order on WhatsApp</button>
+            <a class="button button-ghost" href="cart.html">Go back to cart</a>
+          </div>
           <p class="checkout-disclaimer">Disclaimer: Delivery charges may apply according to distance. Final delivery charges will be discussed over phone.</p>
           <p id="checkout-status" class="checkout-status" aria-live="polite"></p>
         </form>
