@@ -241,3 +241,49 @@ if (successContact) {
     successContact.textContent = `We will contact you on: ${contact}`;
   }
 }
+
+
+const mixboxCountSelect = document.querySelector("#mixbox-count");
+const mixboxFields = document.querySelector("#mixbox-variety-fields");
+const addCustomMixboxButton = document.querySelector("#add-custom-mixbox");
+
+if (mixboxCountSelect && mixboxFields) {
+  const varieties = [
+    "Sunburst Sunshine (Sunflower)",
+    "Pea Pop Splash (Pea Shoots)",
+    "Berry Blaze (Purple Radish)",
+    "Citrus Cloud (White Radish)",
+    "Berry Beet Boom (Beetroot)",
+    "Lime Lift (Wheatgrass)",
+    "Pak Choy Crunch (Pak Choy)",
+    "Brocco Burst (Broccoli)",
+    "Mustard Zing (Mustard)",
+    "Pink Radish Pop (Pink Radish)",
+  ];
+
+  const renderMixboxFields = () => {
+    const count = Number.parseInt(mixboxCountSelect.value, 10) || 2;
+    mixboxFields.innerHTML = "";
+
+    for (let i = 1; i <= count; i += 1) {
+      const wrap = document.createElement("label");
+      wrap.innerHTML = `Variety ${i}
+        <select data-mix-index="${i}">
+          ${varieties.map((v) => `<option value="${v}">${v}</option>`).join("")}
+        </select>`;
+      mixboxFields.appendChild(wrap);
+    }
+  };
+
+  mixboxCountSelect.addEventListener("change", renderMixboxFields);
+  renderMixboxFields();
+
+  if (addCustomMixboxButton) {
+    addCustomMixboxButton.addEventListener("click", () => {
+      const selected = Array.from(mixboxFields.querySelectorAll("select")).map((el) => el.value);
+      const unique = [...new Set(selected)];
+      addToCart("Build Your Own Mixbox", 0, unique.join(", "), "60g");
+      showAddedToCartToast("Custom 60g mixbox added to cart.");
+    });
+  }
+}

@@ -1,13 +1,50 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Mixed Boxes | Sprout Essence</title><link rel="stylesheet" href="style.css" /></head>
-<body>
-<header class="site-header"><nav class="nav"><a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence.jpg';" /><span>SproutEssence</span></a><div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a><a href="products.html" class="is-active">Products</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a><a href="index.html#contact">Contact</a><a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a></div></nav></header>
-<main><section class="section product-page"><div class="product-detail"><div class="product-image"><img src="assets/microgreen-placeholder.svg" alt="Mixed Boxes" /><div class="product-gallery">
-              <img src="assets/microgreen-placeholder.svg" alt="Mixed Boxes image 1" />
-              <img src="assets/microgreen-placeholder.svg" alt="Mixed Boxes image 2" />
-              <img src="assets/microgreen-placeholder.svg" alt="Mixed Boxes image 3" />
-              <img src="assets/microgreen-placeholder.svg" alt="Mixed Boxes image 4" />
-              <img src="assets/microgreen-placeholder.svg" alt="Mixed Boxes image 5" />
-</div></div><div class="product-info"><p class="eyebrow">Product details</p><h1>Mixed Boxes</h1><p class="detail-subtitle">Choose multiple varieties</p><p class="price">Starting ₹199</p><p>Create your mixed box by selecting number of varieties, pack size, and quantity.</p><div class="weight-options"><label><input type="radio" name="mix-count" checked /> 2 varieties</label><label><input type="radio" name="mix-count" /> 3 varieties</label><label><input type="radio" name="mix-count" /> 4 varieties</label></div><div class="weight-options"><label><input type="radio" name="mix-size" checked /> 25g each</label><label><input type="radio" name="mix-size" /> 50g each</label></div><div class="hero-actions"><a class="button button-primary" href="https://wa.me/81303775888?text=Hi%20SproutEssence%2C%20I%20want%20details%20for%20Mixed%20Boxes">Chat on WhatsApp</a><a class="button button-ghost" href="products.html">Back</a></div></div></div></section></main>
-<footer class="site-footer"><div><a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence1.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence1.jpg';" /><span>SproutEssence</span></a></div><div><h4>Connect</h4><p>📧 sproutessence@gmail.com</p><p>📞 9880709414 / 81303775888</p><p>📍 Sector 150, Noida</p></div><p class="footer-note">© <span id="year"></span> SproutEssence. All rights reserved.</p></footer>
-<script src="script.js"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mixed Boxes | Sprout Essence</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header"><nav class="nav"><a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence.jpg';" /><span>SproutEssence</span></a><div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a><a href="products.html" class="is-active">Products</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a><a href="index.html#contact">Contact</a><a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a></div></nav></header>
+    <main>
+      <section class="section">
+        <div class="section-header"><h1>Mixbox collection</h1><p>Choose a curated healthy mixbox or build your own custom 60g mixbox.</p></div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Build your own mixbox (60g)</h3>
+            <p>Select 2, 3, or 4 varieties and add directly to your cart.</p>
+            <label>Number of varieties
+              <select id="mixbox-count">
+                <option value="2">2 varieties</option>
+                <option value="3">3 varieties</option>
+                <option value="4">4 varieties</option>
+              </select>
+            </label>
+            <div id="mixbox-variety-fields" class="weight-options" style="display:grid; gap:10px; margin-top:12px;"></div>
+            <div class="hero-actions">
+              <button type="button" class="button button-primary" id="add-custom-mixbox">Add custom mixbox to cart</button>
+              <a class="button button-ghost" href="products.html">Back to products</a>
+            </div>
+            <p class="checkout-disclaimer">Orders are sent over WhatsApp by you. Any modifications or special instructions can be shared there and will be supported promptly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="healthy-mixes">
+        <div class="section-header"><h2>Special healthy microgreen mixboxes</h2><p>Pre-designed combinations based on wellness goals.</p></div>
+        <div class="card-grid">
+          <article class="card"><h3>Heart Health Box</h3><p>Broccoli, Sunflower, Beetroot, Pak Choi</p><ul class="checklist"><li>Rich in antioxidants</li><li>Supports healthy cholesterol</li><li>Improves blood circulation</li></ul></article>
+          <article class="card"><h3>Immunity Booster Box</h3><p>Mustard, White Radish, Purple Radish, Broccoli</p><ul class="checklist"><li>Rich in Vitamin C</li><li>Anti-inflammatory support</li><li>Supports immune health</li></ul></article>
+          <article class="card"><h3>Metabolism Booster Box</h3><p>Mustard, Pink Radish, White Radish, Methi</p><ul class="checklist"><li>Supports digestion</li><li>Boosts metabolism</li><li>Natural detox support</li></ul></article>
+          <article class="card"><h3>Protein Power Box</h3><p>Pea Shoots, Sunflower, Methi, Broccoli</p><ul class="checklist"><li>High plant protein</li><li>Supports muscle recovery</li><li>Great for smoothies and salads</li></ul></article>
+          <article class="card"><h3>Daily Nutrition Box</h3><p>Sunflower, Pea Shoots, Broccoli, Pak Choi</p><ul class="checklist"><li>Balanced nutrients</li><li>Mild flavor profile</li><li>Supports immune health</li></ul></article>
+          <article class="card"><h3>Antioxidant Power Box</h3><p>Beetroot, Purple Radish, Broccoli, Pak Choi</p><ul class="checklist"><li>High antioxidant content</li><li>Supports cell health</li><li>Anti-aging nutrients</li></ul></article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div><a class="logo" href="index.html" aria-label="Sprout Essence"><img src="assets/sproutessence1.png" alt="Sprout Essence logo" onerror="this.onerror=null; this.src='assets/sproutessence1.jpg';" /><span>SproutEssence</span></a><p>Freshly harvested microgreens and curated wellness boxes.</p></div><div><h4>Explore</h4><a href="products.html">Products</a><a href="mixed-boxes.html">Mixed Boxes</a><a href="recipes.html">Recipes</a><a href="blogs.html">Blogs</a></div><div><h4>Connect</h4><p>📧 sproutessence@gmail.com</p><p>📞 9880709414 / 81303775888</p><p>📍 Sector 150, Noida</p></div><p class="footer-note">© <span id="year"></span> SproutEssence. All rights reserved.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
