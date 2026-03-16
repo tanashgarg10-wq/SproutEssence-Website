@@ -49,6 +49,35 @@ function addToCart(name, price = UNIT_PRICE, type = "", weightLabel = "50g") {
   saveCart(cart);
 }
 
+
+function showAddedToCartToast(message) {
+  let toast = document.querySelector("#added-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "added-toast";
+    toast.className = "added-toast";
+    toast.hidden = true;
+    toast.innerHTML = `
+      <p id="added-toast-message"></p>
+      <div class="added-toast-actions">
+        <a class="button button-primary" href="cart.html">View cart</a>
+        <button class="button button-ghost" type="button" id="continue-shopping-btn">Continue</button>
+      </div>
+    `;
+    document.body.appendChild(toast);
+    toast.querySelector("#continue-shopping-btn")?.addEventListener("click", () => {
+      toast.hidden = true;
+    });
+  }
+
+  const messageNode = toast.querySelector("#added-toast-message");
+  if (messageNode) {
+    messageNode.textContent = message;
+  }
+
+  toast.hidden = false;
+}
+
 function getCartTotals(cart) {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const summary = cart.map((item) => `${getItemLabel(item)} x ${item.quantity}`).join("\n");
@@ -78,7 +107,7 @@ for (const button of document.querySelectorAll(".add-to-cart-btn")) {
     const weightLabel = selectedWeight?.dataset.label || "50g";
 
     addToCart(itemName, Number.isNaN(price) ? UNIT_PRICE : price, itemType, weightLabel);
-    window.location.href = "cart.html";
+    showAddedToCartToast(`${itemName} (${weightLabel}) added to cart.`);
   });
 }
 

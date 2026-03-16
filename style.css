@@ -132,3 +132,10 @@ main { padding-bottom: 40px; }
 .weight-options input { margin-right:6px; }
 .product-gallery { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; padding:12px; }
 .product-gallery img { border-radius:8px; border:1px solid rgba(15,23,42,.08); background:#fff; }
+
+
+#contact { scroll-margin-top: 92px; }
+.card-link { text-decoration:none; color:inherit; }
+.added-toast { position:fixed; right:20px; bottom:20px; background:#fff; border:1px solid rgba(15,23,42,.12); box-shadow:var(--shadow-md); border-radius:14px; padding:14px; z-index:2000; max-width:320px; }
+.added-toast-actions { display:flex; gap:8px; margin-top:10px; }
+.added-toast[hidden] { display:none; }
